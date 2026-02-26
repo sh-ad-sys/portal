@@ -1,0 +1,454 @@
+/* ===============================
+   PARENT DASHBOARD PAGES STYLES
+   Modern Professional Design
+================================ */
+
+/* Base Colors - Red Theme for Parent */
+:root {
+  --parent-primary: #b91c1c;
+  --parent-primary-light: #dc2626;
+  --parent-primary-dark: #991b1b;
+  --parent-accent: #f59e0b;
+  --parent-success: #10b981;
+  --parent-bg: #fff5f5;
+  --parent-card-bg: #ffffff;
+  --parent-text: #1e293b;
+  --parent-text-light: #64748b;
+  --parent-border: #e2e8f0;
+  --parent-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1);
+}
+
+.parent-page {
+  padding: 24px;
+  background: var(--parent-bg);
+  min-height: calc(100vh - 64px);
+}
+
+/* Child Selector Card */
+.child-profile-card {
+  background: linear-gradient(135deg, var(--parent-primary) 0%, var(--parent-primary-light) 100%);
+  border-radius: 16px;
+  padding: 28px;
+  color: white;
+  margin-bottom: 28px;
+  position: relative;
+  overflow: hidden;
+}
+
+.child-profile-card::before {
+  content: '';
+  position: absolute;
+  top: -50%;
+  right: -20%;
+  width: 300px;
+  height: 300px;
+  background: rgba(255,255,255,0.1);
+  border-radius: 50%;
+}
+
+.child-profile-card .child-avatar {
+  width: 80px;
+  height: 80px;
+  border-radius: 50%;
+  background: rgba(255,255,255,0.2);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 32px;
+  font-weight: 600;
+  margin-bottom: 16px;
+}
+
+.child-profile-card h2 {
+  font-size: 24px;
+  font-weight: 700;
+  margin-bottom: 4px;
+}
+
+.child-profile-card .grade-info {
+  font-size: 14px;
+  opacity: 0.9;
+  margin-bottom: 16px;
+}
+
+.child-profile-card .quick-stats {
+  display: flex;
+  gap: 24px;
+}
+
+.child-profile-card .quick-stat {
+  text-align: center;
+}
+
+.child-profile-card .quick-stat .value {
+  font-size: 24px;
+  font-weight: 700;
+}
+
+.child-profile-card .quick-stat .label {
+  font-size: 12px;
+  opacity: 0.8;
+}
+
+/* Progress Cards */
+.progress-card {
+  background: var(--parent-card-bg);
+  border-radius: 12px;
+  padding: 20px;
+  box-shadow: var(--parent-shadow);
+  border: 1px solid var(--parent-border);
+}
+
+.progress-card h3 {
+  font-size: 14px;
+  font-weight: 600;
+  color: var(--parent-text-light);
+  margin-bottom: 12px;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+}
+
+.progress-bar-container {
+  margin-bottom: 8px;
+}
+
+.progress-bar {
+  height: 10px;
+  background: #e2e8f0;
+  border-radius: 5px;
+  overflow: hidden;
+}
+
+.progress-bar .fill {
+  height: 100%;
+  border-radius: 5px;
+  transition: width 0.5s ease;
+}
+
+.progress-bar .fill.green {
+  background: linear-gradient(90deg, #10b981, #34d399);
+}
+
+.progress-bar .fill.blue {
+  background: linear-gradient(90deg, #3b82f6, #60a5fa);
+}
+
+.progress-bar .fill.yellow {
+  background: linear-gradient(90deg, #f59e0b, #fbbf24);
+}
+
+.progress-bar .fill.red {
+  background: linear-gradient(90deg, #ef4444, #f87171);
+}
+
+.progress-value {
+  font-size: 13px;
+  color: var(--parent-text-light);
+  display: flex;
+  justify-content: space-between;
+}
+
+/* Activity Timeline */
+.activity-timeline {
+  position: relative;
+  padding-left: 28px;
+}
+
+.activity-timeline::before {
+  content: '';
+  position: absolute;
+  left: 8px;
+  top: 0;
+  bottom: 0;
+  width: 2px;
+  background: #e2e8f0;
+}
+
+.activity-item {
+  position: relative;
+  padding-bottom: 24px;
+}
+
+.activity-item::before {
+  content: '';
+  position: absolute;
+  left: -24px;
+  top: 4px;
+  width: 12px;
+  height: 12px;
+  border-radius: 50%;
+  background: var(--parent-primary-light);
+  border: 2px solid white;
+  box-shadow: 0 0 0 2px var(--parent-primary-light);
+}
+
+.activity-item:last-child {
+  padding-bottom: 0;
+}
+
+.activity-item .activity-time {
+  font-size: 12px;
+  color: var(--parent-text-light);
+  margin-bottom: 4px;
+}
+
+.activity-item .activity-title {
+  font-weight: 600;
+  color: var(--parent-text);
+  margin-bottom: 4px;
+}
+
+.activity-item .activity-desc {
+  font-size: 14px;
+  color: var(--parent-text-light);
+}
+
+/* Result Cards */
+.result-subject {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 16px 0;
+  border-bottom: 1px solid var(--parent-border);
+}
+
+.result-subject:last-child {
+  border-bottom: none;
+}
+
+.result-subject .subject-name {
+  font-weight: 600;
+  color: var(--parent-text);
+}
+
+.result-subject .subject-marks {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+}
+
+.result-subject .marks-badge {
+  padding: 6px 14px;
+  border-radius: 20px;
+  font-weight: 600;
+  font-size: 14px;
+}
+
+.result-subject .marks-badge.excellent {
+  background: #d1fae5;
+  color: #059669;
+}
+
+.result-subject .marks-badge.good {
+  background: #dbeafe;
+  color: #2563eb;
+}
+
+.result-subject .marks-badge.average {
+  background: #fef3c7;
+  color: #d97706;
+}
+
+.result-subject .marks-badge.needs-improvement {
+  background: #fee2e2;
+  color: #dc2626;
+}
+
+/* Notification Cards */
+.notification-card {
+  display: flex;
+  gap: 16px;
+  padding: 16px;
+  background: var(--parent-card-bg);
+  border-radius: 12px;
+  border: 1px solid var(--parent-border);
+  margin-bottom: 12px;
+  transition: all 0.3s ease;
+}
+
+.notification-card:hover {
+  border-color: var(--parent-primary-light);
+  box-shadow: var(--parent-shadow);
+}
+
+.notification-card.unread {
+  background: #fef2f2;
+  border-left: 4px solid var(--parent-primary);
+}
+
+.notification-icon {
+  width: 44px;
+  height: 44px;
+  border-radius: 10px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+}
+
+.notification-icon.info {
+  background: #dbeafe;
+  color: #2563eb;
+}
+
+.notification-icon.success {
+  background: #d1fae5;
+  color: #059669;
+}
+
+.notification-icon.warning {
+  background: #fef3c7;
+  color: #d97706;
+}
+
+.notification-icon.error {
+  background: #fee2e2;
+  color: #dc2626;
+}
+
+.notification-content {
+  flex: 1;
+}
+
+.notification-content h4 {
+  font-size: 14px;
+  font-weight: 600;
+  color: var(--parent-text);
+  margin-bottom: 4px;
+}
+
+.notification-content p {
+  font-size: 13px;
+  color: var(--parent-text-light);
+  margin: 0;
+}
+
+.notification-time {
+  font-size: 12px;
+  color: var(--parent-text-light);
+  margin-top: 8px;
+}
+
+/* Contact Cards */
+.contact-card {
+  background: var(--parent-card-bg);
+  border-radius: 12px;
+  padding: 20px;
+  border: 1px solid var(--parent-border);
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  transition: all 0.3s ease;
+}
+
+.contact-card:hover {
+  border-color: var(--parent-primary-light);
+  transform: translateY(-2px);
+  box-shadow: var(--parent-shadow);
+}
+
+.contact-avatar {
+  width: 56px;
+  height: 56px;
+  border-radius: 50%;
+  background: linear-gradient(135deg, var(--parent-primary) 0%, var(--parent-primary-light) 100%);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: white;
+  font-weight: 600;
+  font-size: 18px;
+}
+
+.contact-info h4 {
+  font-size: 16px;
+  font-weight: 600;
+  color: var(--parent-text);
+  margin-bottom: 4px;
+}
+
+.contact-info p {
+  font-size: 13px;
+  color: var(--parent-text-light);
+  margin: 0;
+}
+
+.contact-actions {
+  margin-left: auto;
+  display: flex;
+  gap: 8px;
+}
+
+/* Page Header - Parent Style */
+.parent-page .page-header h1 {
+  color: var(--parent-text);
+}
+
+.parent-page .page-header h1 svg {
+  fill: var(--parent-primary);
+}
+
+/* Stats - Parent Style */
+.parent-page .stat-card .stat-icon {
+  background: linear-gradient(135deg, var(--parent-primary) 0%, var(--parent-primary-light) 100%);
+}
+
+/* Buttons - Parent Style */
+.parent-page .btn-primary {
+  background: linear-gradient(135deg, var(--parent-primary) 0%, var(--parent-primary-light) 100%);
+}
+
+.parent-page .btn-primary:hover {
+  box-shadow: 0 4px 12px rgba(185, 28, 28, 0.4);
+}
+
+/* Cards - Parent Style */
+.parent-page .content-card .card-header h2 svg {
+  fill: var(--parent-primary);
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .parent-page {
+    padding: 16px;
+  }
+
+  .child-profile-card .quick-stats {
+    flex-wrap: wrap;
+    gap: 16px;
+  }
+
+  .notification-card {
+    flex-direction: column;
+  }
+
+  .contact-card {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .contact-actions {
+    margin-left: 0;
+    margin-top: 12px;
+  }
+}
+
+/* Empty State */
+.parent-page .empty-state svg {
+  fill: var(--parent-border);
+}
+
+/* Messages - Parent Style */
+.parent-page .message-avatar {
+  background: linear-gradient(135deg, var(--parent-primary) 0%, var(--parent-primary-light) 100%);
+}
+
+/* Tabs - Parent Style */
+.parent-page .tab.active {
+  color: var(--parent-primary);
+}
+
+/* Badge */
+.parent-page .badge {
+  font-size: 12px;
+}

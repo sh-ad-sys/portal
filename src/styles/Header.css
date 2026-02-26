@@ -1,0 +1,115 @@
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  height: 70px;
+  padding: 0 2rem;
+  background: #ffffff;
+  border-bottom: 1px solid #e2e8f0;
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+  color: #1e293b;
+}
+
+/* Left side */
+.header-left {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
+
+.hamburger {
+  font-size: 1.5rem;
+  cursor: pointer;
+  background: transparent;
+  border: none;
+  color: #1e293b;
+}
+
+/* Logo image */
+.logo-image {
+  height: 50px;           /* increased to fit header height nicely */
+  width: auto;            /* preserve aspect ratio */
+  object-fit: contain;
+  border-radius: 6px;
+}
+
+/* School name */
+.school-name {
+  font-size: 1.4rem;      /* bigger font for prominence */
+  font-weight: 700;       /* bold */
+  color: #1e293b;
+  white-space: nowrap;    /* prevent wrapping */
+}
+
+/* Right side */
+.header-right {
+  display: flex;
+  align-items: center;
+  gap: 1.5rem;
+  position: relative;
+}
+
+.notification {
+  font-size: 1.3rem;
+  cursor: pointer;
+  transition: color 0.2s ease;
+}
+
+.notification:hover {
+  color: #1e40af;
+}
+
+.user-dropdown {
+  position: relative;
+}
+
+.user-btn {
+  background: #f1f5f9;
+  border: 1px solid #e2e8f0;
+  padding: 6px 12px;
+  border-radius: 8px;
+  font-weight: 500;
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+
+.user-btn:hover {
+  background: #e2e8f0;
+}
+
+/* Dropdown Menu */
+.dropdown-menu {
+  position: absolute;
+  right: 0;
+  top: 110%;
+  background: #ffffff;
+  border: 1px solid #e2e8f0;
+  border-radius: 8px;
+  box-shadow: 0 8px 20px rgba(0,0,0,0.08);
+  min-width: 170px;
+  overflow: hidden;
+  z-index: 1100;
+}
+
+.dropdown-item {
+  display: block;
+  padding: 0.75rem 1rem;
+  text-decoration: none;
+  color: #1e293b;
+  transition: background 0.2s ease;
+}
+
+.dropdown-item:hover {
+  background: #f8fafc;
+}
+
+.logout {
+  font-weight: 600;
+  color: #dc2626;
+}
+
+.logout:hover {
+  background: #fef2f2;
+}
