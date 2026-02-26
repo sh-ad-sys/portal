@@ -100,9 +100,9 @@ export default function SignInPage() {
         <p className="slogan">The Holistic Community</p>
 
         <div className="image-wrapper">
-          <Image src="/one.png" alt="Main Students" width={500} height={500} className="circle-img large" priority />
+          <Image src="/school.png" alt="Main Students" width={500} height={500} className="circle-img large" priority />
           <div className="small-circle-stack">
-            <Image src="/one.png" alt="Lecture" width={130} height={130} className="circle-img" />
+            <Image src="/game.png" alt="Lecture" width={130} height={130} className="circle-img" />
             <Image src="/one.png" alt="Campus" width={130} height={130} className="circle-img" />
           </div>
         </div>
